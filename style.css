@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: wght@300;400; 500; 600; 700; 800; 900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: rgb(0, 0, 0);
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color:#ff0000;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;   
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+/* Style for skills section */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    background-color: #ffffff;
+    height: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.skill-level {
+    background-color: #3498db;
+    border-radius: 5px;
+    height: 100%;
+    width: 0;
+    text-align: right;
+    padding: 5px;
+    color: #fff;
+}
+
+/* Animation for the skills level */
+.skill-level {
+    transition: width 2s ease-in-out;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .skill-bar {
+        height: 12px;
+    }
+
+    .skill-level {
+        padding: 3px;
+    }
+}
